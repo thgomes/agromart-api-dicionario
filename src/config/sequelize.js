@@ -1,21 +1,19 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-const {
-  DB_HOST, DB_PORT = 5432, DB_DATABASE, DB_USERNAME, DB_PASSWORD, DATABASE_URL
-} = process.env;
+const { DB_HOST, DB_PORT = 5432, DB_DATABASE, DB_USERNAME, DB_PASSWORD, DATABASE_URL } = process.env;
 
 const defaultConfig = {
-  url:DATABASE_URL,
-  dialect: 'postgres',
-  protocol: 'postgres',
-  timezone: '+03:00',
+  url: DATABASE_URL,
+  dialect: "postgres",
+  protocol: "postgres",
+  timezone: "+03:00",
   define: {
     paranoid: true,
   },
   dialectOptions: {
     ssl: {
       require: true,
-      native:true,
+      native: true,
       rejectUnauthorized: false,
     },
   },

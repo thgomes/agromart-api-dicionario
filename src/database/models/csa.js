@@ -7,12 +7,20 @@ export default function (sequelize) {
 
   Csa.init(
     {
-      nameCSA: {
-        type: DataTypes.STRING(140),
+      nomeCSA: {
+        type: DataTypes.STRING(200),
+        allowNull: false,
+      },
+      responsavelCSA: {
+        type: DataTypes.STRING(200),
+        allowNull: false,
+      },
+      emailCSA: {
+        type: DataTypes.STRING(200),
         allowNull: false,
       },
       urlBase: {
-        type: DataTypes.STRING(140),
+        type: DataTypes.STRING(200),
         allowNull: false,
       },
     },

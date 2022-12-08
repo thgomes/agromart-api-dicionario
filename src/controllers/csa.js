@@ -1,7 +1,8 @@
 import createError from 'http-errors';
-
+import payload from '../helpers/payloadMail'
 import db from '@/database';
-
+import {sendMail} from '../helpers/mail'
+const zeroPad = (num, places) => String(num).padStart(places, '0')
 /**
  * POST /csas
  * Create csa request
@@ -13,11 +14,18 @@ export const createCsa = async (req, res, next) => {
     console.log(csaData)
     const csa = await db.models.csas
       .create(csaData, {
-        fields: ['nameCSA', 'urlBase'],
+        fields: ['nomeCSA', 'urlBase', 'responsavelCSA', 'emailCSA'],
       });
 
     // Save this csa to redis
-   
+    console.log(csa)
+    console.log(csa.id)
+    
+    let payloadNew = payload
+    payloadNew.to = csaData.emailCSA
+    payloadNew.html = payloadNew.html.replace('{user}', csa.responsavelCSA).replace('{codigo}', zeroPad(csa.id,4)).replace('{codigo}', zeroPad(csa.id,4))
+    payloadNew.html = payloadNew.html.replace('{codigo}', zeroPad(csa.id,4)).replace('{nomeCSA}', csa.nomeCSA)
+    await sendMail(payloadNew)
     return res.status(201).json(csa);
   } catch (err) {
     console.log(err)
@@ -74,6 +82,7 @@ export const getcsaById = async (req, res, next) => {
   
     return res.status(200).json(csa);
   } catch (err) {
+    console.log(err)
     return next(err);
   }
 };

@@ -8,4 +8,7 @@ router.route('/')
   .get(csaController.getCsas)
   .post(csaController.createCsa);
 
+  router.route('/:id')
+  .get(csaController.getcsaById)
+
 export default router;

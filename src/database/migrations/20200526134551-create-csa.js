@@ -7,11 +7,19 @@ export const up = (queryInterface, Sequelize) => queryInterface.createTable('csa
   },
   urlBase: {
     allowNull: false,
-    type: Sequelize.STRING(140),
+    type: Sequelize.STRING(200),
   },
-  nameCSA: {
+  responsavelCSA: {
     allowNull: false,
-    type: Sequelize.STRING(140),
+    type: Sequelize.STRING(200),
+  },
+  emailCSA: {
+    allowNull: false,
+    type: Sequelize.STRING(200),
+  },
+  nomeCSA: {
+    allowNull: false,
+    type: Sequelize.STRING(200),
   },
   createdAt: {
     allowNull: false,
