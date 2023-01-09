@@ -8,7 +8,6 @@ import createError from 'http-errors';
 import cookieParser from 'cookie-parser';
 
 import * as configs from '@/config';
-import { authenticationMiddleware, sentryMiddleware } from '@/middleware';
 
 const { NODE_ENV } = process.env;
 
@@ -24,10 +23,7 @@ app.use(cors(configs.corsConfig));
 app.use(compression(configs.compressionConfig));
 app.use(cookieParser());
 
-// Custom middleware list
-app.use(authenticationMiddleware);
-if (NODE_ENV !== 'development') {
-}
+
 
 // Load router paths
 configs.routerConfig(app);
