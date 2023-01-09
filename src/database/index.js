@@ -3,7 +3,6 @@ import { Sequelize } from 'sequelize';
 import * as config from '@/config/sequelize';
 
 // import models
-import userModel from './models/user';
 import csaModel from './models/csa';
 
 // Configuration
@@ -16,7 +15,6 @@ const sequelize = new Sequelize(DATABASE_URL,sequelizeConfig);
 
 // Import all model files
 const modelDefiners = [
-  userModel,
   csaModel,
 ];
 
