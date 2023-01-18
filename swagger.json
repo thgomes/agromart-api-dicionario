@@ -18,9 +18,6 @@
     "/csa" : {
       "get" : {
         "summary" : "Lista todas as CSAs cadastradas",
-        "security" : [ {
-          "bearer" : [ ]
-        } ],
         "parameters" : [ {
           "in" : "query",
           "name" : "page",
@@ -46,9 +43,6 @@
       },
       "post" : {
         "summary" : "Cadastra uma CSA",
-        "security" : [ {
-          "bearer" : [ ]
-        } ],
         "parameters" : [ {
           "name" : "body",
           "in" : "body",
@@ -84,7 +78,7 @@
     },
     "/csa/{id}" : {
       "get" : {
-        "summary" : "Resgata informações da CSA por id",
+        "summary" : "Resgata informações da CSA por ID",
         "parameters" : [ {
           "in" : "path",
           "name" : "id",
@@ -101,7 +95,27 @@
           }
         },
         "tags" : [ "csa" ],
-        "description" : "Resgata informações da CSA por id"
+        "description" : "Resgata informações da CSA por ID"
+      },
+      "delete" : {
+        "summary" : "Deletar uma CSA por ID",
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "id",
+          "type" : "integer",
+          "required" : true,
+          "description" : "Id da CSA"
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "OK"
+          },
+          "404" : {
+            "description" : "Not Found"
+          }
+        },
+        "tags" : [ "csa" ],
+        "description" : "Deletar uma CSA por ID "
       }
     }
   },

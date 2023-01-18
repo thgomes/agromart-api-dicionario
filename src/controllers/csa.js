@@ -25,6 +25,8 @@ export const createCsa = async (req, res, next) => {
     payloadNew.to = csaData.emailCSA
     payloadNew.html = payloadNew.html.replace('{user}', csa.responsavelCSA).replace('{codigo}', zeroPad(csa.id,4)).replace('{codigo}', zeroPad(csa.id,4))
     payloadNew.html = payloadNew.html.replace('{codigo}', zeroPad(csa.id,4)).replace('{nomeCSA}', csa.nomeCSA)
+    payloadNew.html = payloadNew.html.replace('{urlBase}', `${csa.urlBase}/admin`).replace('{urlBase}', `${csa.urlBase}/admin`).replace('{urlBase}', `${csa.urlBase}/admin`)
+
     await sendMail(payloadNew)
     return res.status(201).json(csa);
   } catch (err) {
