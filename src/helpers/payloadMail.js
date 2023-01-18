@@ -118,13 +118,13 @@ const payload = {
     <td align="left" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#999999;font-size:14px">Agora você faz parte da rede Agromart!<br><br>Sua CSA "{nomeCSA}" se encontra disponível para ser acessada no aplicativo AgroMart e no site de Administrador!<br></p></td>
     </tr>
     <tr style="border-collapse:collapse">
-    <td align="left" style="padding:0;Margin:0;padding-right:10px;padding-top:20px"><!--[if mso]><a href="https://viewstripo.email/" target="_blank" hidden>
-    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="https://viewstripo.email/"
+    <td align="left" style="padding:0;Margin:0;padding-right:10px;padding-top:20px"><!--[if mso]><a href="{urlBase}" target="_blank" hidden>
+    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="{urlBase}"
     style="height:41px; v-text-anchor:middle; width:216px" arcsize="0%" stroke="f" fillcolor="#9aaea6">
     <w:anchorlock></w:anchorlock>
     <center style='color:#ffffff; font-family:"arial", "helvetica neue", "helvetica", "sans-serif"; font-size:15px; font-weight:400; line-height:15px; mso-text-raise:1px'>Seu código é {codigo}</center>
     </v:roundrect></a>
-    <![endif]--><!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-style:solid;border-color:#9AAEA6;background:#9aaea6;border-width:0px;display:inline-block;border-radius:0px;width:auto;mso-hide:all"><a href="https://viewstripo.email/" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#9aaea6;border-width:10px 20px 10px 20px;display:inline-block;background:#9aaea6;border-radius:0px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Seu código é {codigo}</a></span><!--<![endif]--></td>
+    <![endif]--><!--[if !mso]><!-- --><span class="msohide es-button-border" style="border-style:solid;border-color:#9AAEA6;background:#9aaea6;border-width:0px;display:inline-block;border-radius:0px;width:auto;mso-hide:all"><a href="{urlBase}" class="es-button" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:18px;border-style:solid;border-color:#9aaea6;border-width:10px 20px 10px 20px;display:inline-block;background:#9aaea6;border-radius:0px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Seu código é {codigo}</a></span><!--<![endif]--></td>
     </tr>
     </table></td>
     </tr>
